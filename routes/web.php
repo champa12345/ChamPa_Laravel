@@ -22,7 +22,7 @@ Route::group(['middleware'=>'adminLogin', 'prefix'=>'admin'], function() {
         Route::get('/listUser', 'UserController@getListUser')->name('listUser');
 
         Route::get('addUser', 'UserController@getAddUser')->name('addUser');
-        Route::post('addUser', 'UserController@postaddUser');
+        Route::post('addUser', 'UserController@postAddUser');
 
         Route::get('editUser/{id}', 'UserController@getEditUser')->name('editUser');
         Route::post('editUser/{id}', 'UserController@postEditUser');
@@ -62,7 +62,7 @@ Route::get('/categorytype/{type}', 'PageController@categorytype')->name('categor
 Route::get('/detailproduct/{id}', 'PageController@detailproduct')->name('detailproduct');
 
 Route::get('/contact', 'PageController@contact')->name('lienhe');
-// Route::get('/login', 'PageController@login')->name('dangnhap');
+Route::get('/login', 'PageController@login')->name('dangnhap');
 Route::get('/register', 'PageController@register')->name('dangky');
 Route::post('/login', 'PageController@postLogin')->name('login');
 Route::post('/register', 'PageController@postRegister');

@@ -218,7 +218,10 @@ class PageController extends Controller
         }
         return redirect()->back()->with('thongbao', 'dat hang thanh cong');
     }
-
+    public function test()
+    {
+        
+    }
 
 }
 
