@@ -80,7 +80,9 @@ Route::post('/comments/{id}', 'PageController@comments');
 Route::get('/comments/{id}' , 'PageController@getComment');
 
 
-Route::get('/auth/facebook', 'SocialAuthController@redirectToProvider');
+Route::get('/auth/facebook', 'SocialAuthController@redirectToProvider')->name('facebook.login');
+    
+
 Route::get('/auth/facebook/callback', 'SocialAuthController@handleProviderCallback');
 
 Route::post('forget-pwd-email', 'UserController@forgetPwdEmail')->name('forget-pwd.email');
