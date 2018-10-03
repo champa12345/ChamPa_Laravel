@@ -41,7 +41,8 @@
                 </div>
             </div>
         </form>
-         <a href="{{ url('auth/facebook') }}">Facebook Login</a>
+        <!-- <a href="{{ url('auth/facebook') }}">Facebook Login</a> -->
+        <a href="{{ route('facebook.login')}}" class="btn btn-primary">Facebook Login</a>
     </div>
 </div>
 @endsection
