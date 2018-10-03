@@ -1,8 +1,6 @@
 /node_modules
 /public/hot
-/public/assets
 /public/css
-/public/image
 /public/storage
 /public/admin_asset
 /storage/logs/
