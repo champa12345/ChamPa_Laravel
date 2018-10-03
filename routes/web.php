@@ -89,7 +89,10 @@ Route::post('forget-pwd-email', 'UserController@forgetPwdEmail')->name('forget-p
 Route::get('reset-pwd/{token}', 'UserController@resetPwd');
 Route::post('auth-reset-password', 'UserController@authResetPassword')->name('auth.reset-pwd');
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/redirect/{social}', 'SocialAuthController@redirect');
+Route::get('/callback/{social}', 'SocialAuthController@callback');
+Auth::routes();
+
 
