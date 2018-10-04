@@ -23,7 +23,7 @@
                         <ul class="aside-menu">
                             @foreach($categoryTypes as $categoryType)
                             <li>
-                                <a href="{{ route('categorytype' , $categoryType->id ) }}">
+                                <a href="{{ route('categorytypes.show' , $categoryType->id ) }}">
                                     {{ $categoryType->name }}
                                 </a>
                             </li>
@@ -47,7 +47,7 @@
                                             </div>
                                         @endif
                                         <div class="single-item-header">
-                                            <a href="{{ route('detailproduct', $typeProduct->id) }}">
+                                            <a href="{{ route('products.show', $typeProduct->id) }}">
                                                 <img src="{{ asset(config('app.link') . $typeProduct->image )}}" alt="" class="img__fix"></a>
                                         </div>
                                         <div class="single-item-body">
@@ -63,7 +63,7 @@
                                         </div>
                                         <div class="single-item-caption">
                                             <a class="add-to-cart pull-left" href="{{ route('addToCart',$typeProduct->id ) }}"><i class="fa fa-shopping-cart"></i></a>
-                                            <a class="beta-btn primary" href="{{ route('detailproduct', $typeProduct->id) }}">{{ trans('home.details') }} <i class="fa fa-chevron-right"></i></a>
+                                            <a class="beta-btn primary" href="{{ route('products.show', $typeProduct->id) }}">{{ trans('home.details') }} <i class="fa fa-chevron-right"></i></a>
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>
@@ -82,7 +82,7 @@
                                 <div class="col-sm-4">
                                     <div class="single-item">
                                         <div class="single-item-header">
-                                            <a href="{{route('detailproduct' ,$catetoryFurther->id )}}">
+                                            <a href="{{route('products.show' ,$catetoryFurther->id )}}">
                                                 <img src="{{ asset(config('app.link') . $catetoryFurther->image) }}" alt="" class="img__fix">
                                             </a>
                                         </div>
@@ -99,7 +99,7 @@
                                         </div>
                                         <div class="single-item-caption">
                                             <a class="add-to-cart pull-left" href="{{ route('addToCart', $catetoryFurther->id) }}"><i class="fa fa-shopping-cart"></i></a>
-                                            <a class="beta-btn primary" href="{{ route('detailproduct', $catetoryFurther->id) }}">{{ trans('home.details') }}<i class="fa fa-chevron-right"></i></a>
+                                            <a class="beta-btn primary" href="{{ route('products.show', $catetoryFurther->id) }}">{{ trans('home.details') }}<i class="fa fa-chevron-right"></i></a>
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>

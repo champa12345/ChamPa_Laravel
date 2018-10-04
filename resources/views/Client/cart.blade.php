@@ -63,7 +63,7 @@
                                     <span class="amount"> {{ $product_cart['qty'] * $product_cart['item']['price'] }}</span>
                                 </td>
                                 <td class="product-remove">
-                                    <a href="{{ route('delItemCart' ,$product_cart['item']['id']) }}" class="remove" title="Remove this item"><i class="fa fa-trash-o"></i></a>
+                                    <a href="{{ route('updatecarts.destroy' ,$product_cart['item']['id']) }}" class="remove" title="Remove this item"><i class="fa fa-trash-o"></i></a>
                                 </td>
                                 <td>
                                     <button type="submit" class="beta-btn primary">
@@ -89,7 +89,7 @@
                                       Update Cart
                                     <i class="fa fa-chevron-right"></i>
                                 </a> --}}
-                                <a href="{{ route('dathang') }}" class="beta-btn primary text-center">Proceed to Checkout
+                                <a href="{{ route('checkouts.index') }}" class="beta-btn primary text-center">Proceed to Checkout
                                     <i class="fa fa-chevron-right"></i>
                                 </a>
                             </td>

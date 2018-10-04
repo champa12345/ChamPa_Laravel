@@ -42,7 +42,7 @@
                                     </div>
                                     @endif
                                     <div class="single-item-header">
-                                        <a href="{{ route('detailproduct', $newproduct->id ) }}">
+                                        <a href="{{ route('products.show', $newproduct->id ) }}">
                                             <img src="{{ asset(config('app.link') .$newproduct->image) }}" alt="" height="250px;">
                                         </a>
                                     </div>
@@ -61,7 +61,7 @@
                                             <a class="add-to-cart pull-left" href="{{ route('addToCart', $newproduct->id) }}">
                                                 <i class="fa fa-shopping-cart"></i>
                                             </a>
-                                        <a class="beta-btn primary" href="{{ route('detailproduct',$newproduct->id ) }}">{{ trans('home.details') }}
+                                        <a class="beta-btn primary" href="{{ route('products.show',$newproduct->id ) }}">{{ trans('home.details') }}
                                             <i class="fa fa-chevron-right"></i>
                                         </a>
                                         <div class="clearfix"></div>
@@ -84,7 +84,7 @@
                             <div class="col-sm-3">
                                 <div class="single-item">
                                     <div class="single-item-header">
-                                         <a href="{{ route('detailproduct', $topproduct->id) }}">
+                                         <a href="{{ route('products.show', $topproduct->id) }}">
                                             <img src="{{ asset(config('app.link') . $topproduct->image )}}" alt="" style="height: 250px;">
                                         </a>
                                     </div>
@@ -101,7 +101,7 @@
                                     </div>
                                     <div class="single-item-caption">
                                         <a class="add-to-cart pull-left" href="{{ route('addToCart', $topproduct->id) }}"><i class="fa fa-shopping-cart"></i></a>
-                                        <a class="beta-btn primary" href="{{ route('detailproduct', $topproduct->id) }}">{{ trans('home.details') }} <i class="fa fa-chevron-right"></i></a>
+                                        <a class="beta-btn primary" href="{{ route('products.show', $topproduct->id) }}">{{ trans('home.details') }} <i class="fa fa-chevron-right"></i></a>
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>

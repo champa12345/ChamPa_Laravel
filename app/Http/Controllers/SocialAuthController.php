@@ -65,9 +65,10 @@ class SocialAuthController extends Controller
         $account = SocialAccount::whereProvider($social)
                     ->whereProviderUserId($providerUser->getId())
                     ->first();
-
         if ($account) {
+            
             return $account->user;
+
         } else {
             $email = $providerUser->getEmail() ?? $providerUser->getNickname();
             $account = new SocialAccount([
@@ -75,7 +76,6 @@ class SocialAuthController extends Controller
                 'provider' => $social
             ]);
             $user = User::whereEmail($email)->first();
-
             if (!$user) {
 
                 $user = User::create([

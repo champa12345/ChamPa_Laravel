@@ -76,7 +76,7 @@
                             <div class="col-sm-4">
                                 <div class="single-item">
                                     <div class="single-item-header">
-                                        <a href="{{ route('detailproduct', $productother->id ) }}">
+                                        <a href="{{ route('products.show', $productother->id ) }}">
                                             <img src="{{ asset(config('app.link') .$productother->image) }}" alt="" class="img__fix">
                                         </a>
                                     </div>
@@ -93,7 +93,7 @@
                                     </div>
                                     <div class="single-item-caption">
                                         <a class="add-to-cart pull-left" href="{{ route('addToCart',$productother->id ) }}"><i class="fa fa-shopping-cart"></i></a>
-                                        <a class="beta-btn primary" href="{{ route('detailproduct', $productother->id ) }}">{{ trans('home.details') }} <i class="fa fa-chevron-right"></i></a>
+                                        <a class="beta-btn primary" href="{{ route('products.show', $productother->id ) }}">{{ trans('home.details') }} <i class="fa fa-chevron-right"></i></a>
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
