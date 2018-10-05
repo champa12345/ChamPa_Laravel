@@ -18,7 +18,7 @@
                                             <div class="ribbon sale">{{ trans('home.sale') }}</div>
                                         </div>
                                         @endif
-                                        <div class="single-item-header">
+                                        <div class="single-itemss-header">
                                             <a href="{{ route('detailproduct', $searchProduct->id ) }}">
                                                 <img src="{{ asset(config('app.link') .$searchProduct->image) }}" alt="" height="250px;">
                                             </a>

@@ -40,7 +40,9 @@
                 <div class="col-sm-3"></div>
             </div>
         {!! Form::close() !!}
-        <a href="{{ url('auth/facebook') }}">Facebook Login</a>
+        <a class="btn btn-link" href="{{ url('login/github') }}">
+             Đăng nhập bằng Github
+        </a>
     </div>
 </div>
 @endsection

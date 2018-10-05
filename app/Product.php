@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $guarded = ['id'];
-
-     public function billDetails()
+    protected $perPage = config('app.pagination');
+    
+    public function billDetails()
     {
         return $this->hasMany('App\BillDetail');
     }

@@ -46,7 +46,7 @@
                             @foreach($product_carts as $product_cart)
                             <div class="cart-item">
                                 <a class="cart-item-edit" href="{{ route('viewCart') }}"><i class="fa fa-pencil"></i></a>
-                                <a class="cart-item-delete" href="{{ route('delItemCart' ,$product_cart['item']['id'] )}}"><i class="fa fa-times"></i></a>
+                                <a class="cart-item-delete" href="{{ route('updatecarts.destroy' ,$product_cart['item']['id'] )}}"><i class="fa fa-times"></i></a>
                                 <div class="media">
                                     <a class="pull-left" href="#"><img src="{{ asset(config('app.link')
                                      .$product_cart['item']['image'] ) }}" alt=""></a>
@@ -62,7 +62,7 @@
                                 <div class="clearfix"></div>
                                 <div class="center">
                                     <div class="space10">&nbsp;</div>
-                                    <a href="{{ route('dathang') }}" class="beta-btn primary text-center">{{ trans('home.order') }} <i class="fa fa-chevron-right"></i></a>
+                                    <a href="{{ route('checkouts.index') }}" class="beta-btn primary text-center">{{ trans('home.order') }} <i class="fa fa-chevron-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                         <ul class="sub-menu">
                             @foreach($typecategories as $typecategorie)
                             <li>
-                                <a href="{{ route('categorytype', $typecategorie->id ) }}">{{ $typecategorie->name }}</a>
+                                <a href="{{ route('categorytypes.show', $typecategorie->id ) }}">{{ $typecategorie->name }}</a>
                             </li>
                             @endforeach
                         </ul>

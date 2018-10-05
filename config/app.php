@@ -6,7 +6,7 @@ return [
     'img_name_length' => '4',
     'paginate' => '6',
     'pagination' => '8',
-    'link' => 'image/product/',
+    'link' => '',
     'paginates' =>'4',
     'comparefix' => '0',
     'limit' => '9',
