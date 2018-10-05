@@ -18,43 +18,13 @@ Route::group(['middleware'=>'adminLogin', 'prefix'=>'admin'], function() {
         return view('master_admin');
     });
     Route::group(['prefix'=>'users'], function() {
-
-        Route::get('/listUser', 'UserController@getListUser')->name('listUser');
-
-        Route::get('addUser', 'UserController@getAddUser')->name('addUser');
-        Route::post('addUser', 'UserController@postAddUser');
-
-        Route::get('editUser/{id}', 'UserController@getEditUser')->name('editUser');
-        Route::post('editUser/{id}', 'UserController@postEditUser');
-
-        Route::get('/delete/{id}', 'UserController@getDeleteUser')->name('deleteUser');
+        Route::resource('listcategories', 'CategoryAdminController');
     });
-    
     Route::group(['prefix'=>'product'], function() {
-        Route::get('/listProduct', 'ProductController@getListProduct')->name('listProduct');
-
-        Route::get('addProduct', 'ProductController@getAddProduct')->name('addProduct');
-        Route::post('addProduct', 'ProductController@postAddProduct');
-
-        Route::get('editProduct/{id}', 'ProductController@getEditProduct')->name('editProduct');
-        Route::post('editProduct/{id}', 'ProductController@postEditProduct');
-
-        Route::get('/delete/{id}', 'ProductController@getDeleteProduct')->name('deleteProduct');
-
+        Route::resource('listproducts', 'CategoryAdminController');
     });
-    
     Route::group(['prefix'=>'category'], function() {
-        Route::get('/listCategory', 'CategoryController@getListCategory')->name('listCategory');
-
-        Route::get('/addCategory', 'CategoryController@getAddCategory')->name('addCategory');
-        Route::post('/addCategory', 'CategoryController@postAddCategory');
-
-        Route::get('editCategory/{id}', 'CategoryController@getEditCategory')->name('editCategory');
-        Route::post('editCategory/{id}', 'CategoryController@postEditCategory');
-
-        Route::get('/delete/{id}', 'CategoryController@getDeleteCategory')->name('deleteCategory');
-
-        Route::post('category-import', 'CategoryController@importCategory')->name('importCategory');
+        Route::resource('listusers', 'CategoryController@getListCategory');
     });
 });
 

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $guarded = ['id'];
-    protected $perPage = config('app.pagination');
+    protected $perPage = 8;
     
     public function billDetails()
     {

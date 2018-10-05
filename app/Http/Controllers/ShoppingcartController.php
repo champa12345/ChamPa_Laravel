@@ -42,9 +42,7 @@ class ShoppingcartController extends Controller
             $price = $request->price;
             $quantity = $request->quantity;
             Cart::add($id,$name,$quantity,$price);
-
-            Session::flash('add_cart', "Đã thêm sản phẩm vào giỏ hàng" );
-
+            Session::flash('add_cart', "Đã thêm sản phẩm vào gio hàng" );
         }
         else {
             $id = $request->id;
